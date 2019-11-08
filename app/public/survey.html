@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend survey</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container content">
+        <h1>Friend Finder Survey</h1>
+        <p>Take a quick survey to find your perfect match! These questions are answered by the numbers 1 through 5. 1
+            being, you disagree and 5 you really really like.</p>
+        <form>
+            <div class="form-group">
+                <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (required)">
+
+            </div>
+            <div class="form-group">
+                <label for="question1">If I had to pick, I would rather have a friend who enjoys doing the same
+                    things as me than a friend who feels the same way about life as I do.</label>
+                <select class="form-control" id="question1">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question2">The most important thing about a friendship is having somebody to
+                    confide in. </label>
+                <select class="form-control" id="question2">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question3">When I talk with friends on the phone, it is usually to chat rather than to
+                    make arrangements. </label>
+                <select class="form-control" id="question3">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question4">I tend to think of an activity I want to do and then find somebody to do it
+                    with. </label>
+                <select class="form-control" id="question4">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question5">I prefer meeting a friend for a specific activity, e.g. going to the cinema,
+                    playing golf. </label>
+                <select class="form-control" id="question5">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question6">My friends value me more as someone who is a support to them than as
+                    someone to have fun with. </label>
+                <select class="form-control" id="question6">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question7">If a friend was having personal problems, I would contact them to
+                    discuss the problem.</label>
+                <select class="form-control" id="question7">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question8">When I have a personal problem, I feel that it is better to share it with a
+                    friend. </label>
+                <select class="form-control" id="question8">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question9">If I have to say something critical to a friend, I think it’s best to just come
+                    right out and say it. </label>
+                <select class="form-control" id="question9">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question10">My friends value me more as someone to have fun with than as someone
+                    who is a support to them. </label>
+                <select class="form-control" id="question10">
+                    <option value="empty"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </select>
+            </div>
+
+
+        </form>
+        
+        <div class="text-center">
+            <button id="submitBtn" type="submit" class="btn btm-success btn-lg">Submit</button>
+        </div>
+
+        <!-- Modal after survey completion -->
+        <div id="bestFriendModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Your New Best Friend</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="bestFriend"></h2>
+                        <img id="bestFriendPhoto" src="#">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
