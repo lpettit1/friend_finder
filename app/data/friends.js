@@ -1,4 +1,4 @@
-var friendMatch = [
+var friends = [
     {
         name: "Edward Connolly",
         photo: "./images/edward.jpg",
@@ -21,4 +21,4 @@ var friendMatch = [
     }
 ];
 
-module.exports = friendMatch;
+module.exports = friends;
